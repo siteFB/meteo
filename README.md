@@ -13,5 +13,5 @@ $\text{\color{red}{- \ 1 \ version \ in \ Symfony}}$ <br><br>
 
 $\mathcal{\color{magenta}{Bootstrap \ will \ be \ } \\color{yellow}{ \ recurring \ for } \\color{orange}{ \ all \ Front \ End}}$
 
-$\mathcal{\color{teal}{Cause \ you \ like\ colors \ ... \ :joy: }
+$\mathbb{\color{teal}{Made \ with \ colors \ ... \ :joy: }}$
 
