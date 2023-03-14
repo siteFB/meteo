@@ -3,7 +3,7 @@
 [![](https://img.shields.io/badge/POO-yellow?style=for-the-badge)]
 [![](https://img.shields.io/badge/SYMFONY.io-orange?style=for-the-badge)]
 
-#### $\text{\color{olive}{méTÉo}}$ :earth_africa:
+## $\text{\color{olive}{méTÉo}}$ :earth_africa:
 
 $\mathbb{\color{teal}{Offer \ 3 \ versions \ for \ the \ same \ site}}$
 
