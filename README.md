@@ -1,12 +1,12 @@
 # meteo
 ```diff
-+ Offer 3 versions for the same site<br>
++ Offer 3 versions for the same site
 ```
 ```diff
-# 1 version in procedural php,<br>
-# 1 version in POO,<br>
-1 version in Symfony.<br>
-# Bootstrap will be recurring for all Front End.<br>
+@@ 1 version in procedural php,
+# 1 version in POO,
+1 version in Symfony.@@ 
+# Bootstrap will be recurring for all Front End.
 ```
 
 
