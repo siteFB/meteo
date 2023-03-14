@@ -11,6 +11,6 @@ $\text{\color{lime}{- \ 1 \ version \ in \ procedural \ php}}$ <br>
 $\text{\color{blue}{- \ 1 \ version \ in \ POO}}$ <br>
 $\text{\color{red}{- \ 1 \ version \ in \ Symfony}}$ <br>
 
-$\mathcal{\color{magenta}{Bootstrap \ will \ be \ } \\color{yellow}{ \ recurring \ for } \\color{orange}{ \ all \ Front \ End}}<br><br>
-$\mathscr{\color{teal}{ \ Made \ with \ colors \ ... \ }}$  :stuck_out_tongue_winking_eye: :joy: 
+$\mathcal{\color{magenta}{Bootstrap \ will \ be \ } \\color{yellow}{ \ recurring \ for } \\color{orange}{ \ all \ Front \ End}}$ <br><br>
+$\mathscr{\color{purple}{ \ Made \ with \ colors \ ... \ }}$  :stuck_out_tongue_winking_eye: :joy: 
 
