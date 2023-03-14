@@ -1,13 +1,16 @@
 # meteo
-```diff
-+ Offer 3 versions for the same site
-```
-```diff
+
++ Offer 
+$\mathbb{\color{teal}{3 \ versions \ for \ the \ same \ site}}$
+
 # 1 version in procedural php,
 # 1 version in POO,
 # 1 version in Symfony
 @@ Bootstrap will be recurring for all Front End @@ 
-```
+
+
+
+
 $\color[rgb]{1,0,1} hello$
 
 $\color[RGB]{155,127,0} hello$
