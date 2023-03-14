@@ -6,7 +6,7 @@
 ## $\text{\color{olive}{méTÉo}}$ :earth_africa:
 <br>
 
-$\mathbb{\color{teal}{Offer \ 3 \ versions \ for \ the \ same \ site}}$
+$\mathbb{\color{teal}{Offer \ 3 \ versions \ for \ the \ same \ site:}}$
 
 $\text{\color{lime}{- \ 1 \ version \ in \ procedural \ php}}$ <br>
 $\text{\color{blue}{- \ 1 \ version \ in \ POO}}$ <br>
