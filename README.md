@@ -5,6 +5,7 @@
 <br>
 ## $\text{\color{olive}{méTÉo}}$ :earth_africa:
 <br>
+
 $\mathbb{\color{teal}{Offer \ 3 \ versions \ for \ the \ same \ site}}$
 
 $\text{\color{lime}{- \ 1 \ version \ in \ procedural \ php}}$ <br>
