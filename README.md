@@ -3,8 +3,9 @@
 + Offer 
 $\mathbb{\color{teal}{3 \ versions \ for \ the \ same \ site}}$
 
-# 1 version in procedural php,
-# 1 version in POO,
+$\mathscr{\color{blue}{ 1 \ version \ in \ procedural \ PHP}}$
+$\mathscr{\color{blue}{ 1 \ version \ in \ POO}}$
+$\mathscr{\color{blue}{ 1 \ version \ in \ Symfony}}$
 # 1 version in Symfony
 @@ Bootstrap will be recurring for all Front End @@ 
 
