@@ -29,7 +29,7 @@ $\mathscr{\color{red}{mon}\color{white}{day}}$
 $\textcolor{olive}{\TeX} \ \textcolor{darkgray}{workaround \ found \ by \ Dassalem \ Mohammed \ Yasser}$
 
 $\textit{hello}$  #italic
-
+ 
 $\text{hello}$    #normal
 
 $\Large{hello}$$   #Bigger text size
