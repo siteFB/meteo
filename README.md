@@ -35,4 +35,4 @@ $\text{hello}$    #normal
 
 $\Large{hello}$$   #Bigger text size
 
-$$\LaTeX$$
+
