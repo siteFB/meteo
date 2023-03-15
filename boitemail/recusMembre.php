@@ -11,7 +11,11 @@ if(isset($_SESSION['user']['id']) AND !empty($_SESSION['user']['id'])){
 
     $id_destinataire = strip_tags($_SESSION['user']['id']);
 
-$msg = $db->prepare("SELECT * FROM `messagerie` WHERE `id_destinataire` = :id_destinataire ORDER BY dateMess DESC");
+$msg = $db->prepare("SELECT * FROM `messagerie` 
+                     WHERE `id_destinataire` = :id_destinataire
+                     ORDER BY dateMess
+                     DESC
+                     ");
 
 $msg->bindValue(':id_destinataire', $id_destinataire, PDO::PARAM_INT);
 
@@ -19,7 +23,7 @@ $msg->execute();
 $msg_nbr = $msg->rowCount();
 }
 
-$titre = "Espace Administrateur";
+$titre = "Espace Membre";
 
 include "../accueil/header.php";
 ?>
@@ -45,8 +49,8 @@ include "../espaces/bienvenu.php";
 					<div class="col-md-3">
 						<div>
 							<ul class="nav flex-column mt-5">
-                               <li><a href="/boitemail/ecrireAdmin.php" class="btn btn-block btn-primary text-white my-4" data-toggle="modal" data-target="#compose-modal"><i class="fa fa-pencil"></i>&nbsp;&nbsp;&nbsp;ÉCRIRE&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-								<li class="mt-3 mb-3"><a class="fs-5" href="/boitemail/recusAdmin.php">Messages (<?php echo $msg_nbr;?>)</a></li>
+                               <li><a href="/boitemail/ecrireMembre.php" class="btn btn-block btn-primary text-white my-4" data-toggle="modal" data-target="#compose-modal"><i class="fa fa-pencil"></i>&nbsp;&nbsp;&nbsp;ÉCRIRE&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+								<li class="mt-3 mb-3"><a class="fs-5" href="/boitemail/recusMembre.php">Messages (<?php echo $msg_nbr;?>)</a></li>
 							</ul>
 						</div>
 					</div>
@@ -68,7 +72,7 @@ include "../espaces/bienvenu.php";
 							<table class="table">
 								<tbody>
                                 <?php
-                    if($msg_nbr == 0) { $_SESSION['message'] = "Vous n'avez aucun message";  }
+                    if($msg_nbr == 0) { $_SESSION['message'] = "Vous n'avez aucun message"; }
                 while($m = $msg->fetch()) {
                     $p_exp = $db->prepare('SELECT pseudo FROM users WHERE idUser= ?');
                     $p_exp->execute(array($m['id_expediteur']));
@@ -77,9 +81,9 @@ include "../espaces/bienvenu.php";
                     ?>   
                                 <tr>
 									<td class="fs-5"><?php echo "$p_exp"; ?></td>
-									<td><a class="fs-5" href="detailsAdmin.php?idUser=<?php echo $m['id_expediteur'] ; ?>"><?php echo $m['titreMessage']; ?></a></td>
+									<td><a class="fs-5" href="detailsMembre.php?idUser=<?php echo $m['id_expediteur'] ; ?>"><?php echo $m['titreMessage']; ?></a></td>
 									<td class="time"><?php echo $m['dateMess']; ?></td>                             
-                                    <td><a class="fs-5 text-secondary" onclick="return confirm('Voulez-vous supprimer ce message?')" href="supprMessAdmin.php?idUser=<?php echo $m['idMessagerie']; ?>"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+                                    <td><a class="fs-5 text-secondary" onclick="return confirm('Voulez-vous supprimer ce message?')" href="supprMessMembre.php?idUser=<?php echo $m['idMessagerie']; ?>"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
 								</tr>
                                 <?php
                                 }
