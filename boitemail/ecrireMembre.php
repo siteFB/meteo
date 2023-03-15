@@ -37,7 +37,7 @@ if (isset($_SESSION['user']['id']) and !empty($_SESSION['user']['id'])) {
 
                 $_SESSION['message'] = "Votre message a bien été envoyé";
                 require_once('../base/deconnexionBDD.php');
-                header('Location: ecrireAdmin.php');
+                header('Location: ecrireMembre.php');
             } else {
                 $_SESSION['erreur'] = "Ce destinataire n'existe pas";
             }
@@ -51,7 +51,7 @@ if (isset($_SESSION['user']['id']) and !empty($_SESSION['user']['id'])) {
     $destinataires = $db->query('SELECT pseudo FROM users ORDER BY pseudo');
 
 
-        $titre = "Espace administrateur";
+        $titre = "Espace Membre";
 
         include "../accueil/header.php";
 ?>
@@ -77,8 +77,8 @@ if (isset($_SESSION['user']['id']) and !empty($_SESSION['user']['id'])) {
                         </h4>
                         <div>
                             <ul class="nav flex-column mt-5">
-                                <li><a href="/boitemail/ecrireAdmin.php" class="btn btn-block btn-primary text-white mb-2" data-toggle="modal" data-target="#compose-modal"><i class="fa fa-pencil"></i>&nbsp;&nbsp;&nbsp;ÉCRIRE&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-                                <li class="mt-3 mb-3"><a class="fs-5" href="/boitemail/recusAdmin.php">Messages</a></li>
+                                <li><a href="/boitemail/ecrireMembre.php" class="btn btn-block btn-primary text-white mb-2" data-toggle="modal" data-target="#compose-modal"><i class="fa fa-pencil"></i>&nbsp;&nbsp;&nbsp;ÉCRIRE&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                                <li class="mt-3 mb-3"><a class="fs-5" href="/boitemail/recusMembre.php">Messages</a></li>
                             </ul>
                         </div>
                     </div>
@@ -123,5 +123,7 @@ if (isset($_SESSION['user']['id']) and !empty($_SESSION['user']['id'])) {
         ?>
 
 <?php
-}else{ header('Location: ecrireAdmin.php'); }
+} else {
+    header('Location: ecrireMembre.php');
+}
 ?>

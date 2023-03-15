@@ -31,17 +31,17 @@ if (isset($_GET['idUser']) && !empty($_GET['idUser'])) {
 
     /*echo '<pre>';
     print_r($resultat); 
-    print_r($resultat[0]['pseudo']); 
+    print_r($resultat[0]['pseudo']);
     print_r($_GET['idUser']);
     echo '</pre>';*/
 
     if (!$resultat) {
         $_SESSION['erreur'] = "Cet id n'existe pas";
-        header('Location: /boitemail/recusAdmin.php');
+        header('Location: /boitemail/recusMembre.php');
     }
 }
 
-$titre = "Espace Administrateur";
+$titre = "Espace membre";
 
 include "../accueil/header.php";
 ?>
@@ -67,8 +67,8 @@ include "../espaces/bienvenu.php";
                     <div class="col-md-3">
                         <div>
                             <ul class="nav flex-column mx-3">
-                                <li> <a href="/boitemail/ecrireAdmin.php" class="btn btn-block btn-primary text-white my-4" data-toggle="modal" data-target="#compose-modal"><i class="fa fa-pencil"></i>&nbsp;&nbsp;&nbsp;ÉCRIRE&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-                                <li class="mt-3 mb-3"><a class="fs-5" href="/boitemail/recusAdmin.php">Messages</a></li>
+                                <li> <a href="/boitemail/ecrireMembre.php" class="btn btn-block btn-primary text-white my-4" data-toggle="modal" data-target="#compose-modal"><i class="fa fa-pencil"></i>&nbsp;&nbsp;&nbsp;ÉCRIRE&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                                <li class="mt-3 mb-3"><a class="fs-5" href="/boitemail/recusMembre.php">Messages</a></li>
                             </ul>
                         </div>
                     </div>
@@ -112,7 +112,7 @@ include "../espaces/bienvenu.php";
                                 </div>
                                 <div class="d-flex justify-content-end">
                                     <p class="pt-2 px-2 text-end time"><?php echo $result['dateMess']; ?></p>
-                                    <p class=" pt-2 px-2"><a class="fs-5 text-secondary text-primary" onclick="return confirm('Voulez-vous supprimer ce message?')" href="supprMessAdmin.php?idUser=<?php echo $result['idMessagerie']; ?>"><i class="fa fa-trash" aria-hidden="true"></i></a></p>
+                                    <p class=" pt-2 px-2"><a class="fs-5 text-secondary text-primary" onclick="return confirm('Voulez-vous supprimer ce message?')" href="supprMessMembre.php?idUser=<?php echo $result['idMessagerie']; ?>"><i class="fa fa-trash" aria-hidden="true"></i></a></p>
                                 </div>
                             <?php
                             }
