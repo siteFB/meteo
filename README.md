@@ -26,5 +26,5 @@ $\mathscr{\color{purple}{ \ Made \ with \ colors \ ... \ }}$  :stuck_out_tongue_
 
 2) Version PHP
 - Sécurisation des injections SQL, failles XSS, de la connexion et du mot de passe
-- Emploi des sessions, de la méthode PDO prepare, accroche des paramètres
+- Autres astuces à voir ;)
 
