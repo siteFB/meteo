@@ -11,7 +11,11 @@ if(isset($_SESSION['user']['id']) AND !empty($_SESSION['user']['id'])){
 
     $id_destinataire = strip_tags($_SESSION['user']['id']);
 
-$msg = $db->prepare("SELECT * FROM `messagerie` WHERE `id_destinataire` = :id_destinataire ORDER BY dateMess DESC");
+$msg = $db->prepare("SELECT * FROM `messagerie`
+                     WHERE `id_destinataire` = :id_destinataire
+                     ORDER BY dateMess
+                     DESC
+                     ");
 
 $msg->bindValue(':id_destinataire', $id_destinataire, PDO::PARAM_INT);
 
@@ -35,6 +39,19 @@ include "../espaces/bienvenu.php";
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
 <section>
+
+<span class="d-flex justify-content-end mx-5">
+    <?php
+        if (isset($_SESSION["user"]) && ($_SESSION["user"]["statut"] == "Admin")) {
+            echo "
+            <div>
+                <button type='button' class='btn btn-success'><a class='text-white' href='../espaces/espaceAdminister/espaceAdmin.php'>Retour</a></button>
+            </div>
+                   ";
+        }else{header('Location: ../../../formulaires/formConnexion.php');}
+    ?>
+</span>
+
 <h2 class="text-center pb-4 mt-2 mb-5 text-primary">Espace messagerie</h2>
 <div class="container mb-5">
     <!----------------------------------------------------------------------------->

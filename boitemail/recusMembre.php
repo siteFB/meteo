@@ -39,6 +39,19 @@ include "../espaces/bienvenu.php";
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
 <section>
+
+<span class="d-flex justify-content-end mx-5">
+    <?php
+        if (isset($_SESSION["user"]) && ($_SESSION["user"]["statut"] == "Membre")) {
+            echo "
+            <div>
+                <button type='button' class='btn btn-success'><a class='text-white' href='../espaces/espaceMembres/espaceMembre.php'>Retour</a></button>
+            </div>
+                   ";
+        }else{header('Location: ../../../formulaires/formConnexion.php');}
+    ?>
+</span>
+
 <h2 class="text-center pb-4 mt-2 mb-5 text-primary">Espace messagerie</h2>
 <div class="container mb-5">
     <!----------------------------------------------------------------------------->

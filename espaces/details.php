@@ -4,7 +4,7 @@ session_start();
 if(isset($_GET['idEphemeride']) && !empty($_GET['idEphemeride'])){
     require_once('../base/connexionBDD.php');
 
-    $id = strip_tags($_GET['idEphemeride']);
+    $id = strip_tags(stripslashes(htmlentities(trim($_GET['idEphemeride']))));
 
     $sql = 'SELECT `imgTemps` FROM `Ephemeride` WHERE `idEphemeride` = :id;';
 
@@ -50,7 +50,7 @@ include "bienvenu.php";
 
 <div class="row ">
     <div class="col-4 mx-auto text-center mb-3">
-        <img src="../images/<?php echo $produit['imgTemps'] ?>" style="height:60vh; width:70vh" class="pb-3 mb-5">
+        <img src="../images/<?php echo strip_tags(stripslashes(htmlentities(trim($produit['imgTemps'])))) ?>" style="height:60vh; width:70vh" class="pb-3 mb-5">
     </div>
 </div>
 

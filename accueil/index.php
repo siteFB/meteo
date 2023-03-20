@@ -1,7 +1,4 @@
 <?php
-session_start();
-?>
-<?php
 require_once('../base/connexionBDD.php');
 
 $sql = 'SELECT * FROM `ephemeride`';
@@ -50,7 +47,7 @@ include "titre.php";
     <!-------------------------- Inscription ------------------------------->
     <div class="container col-xl-10 col-xxl-8 pt-2 my-3">
         <div class="row align-items-center g-5 py-3">
-            <section class="col-lg-7 text-center text-lg-start">
+            <section id="inscription" class="col-lg-7 text-center text-lg-start">
                 <h2 class="display-4 fw-bold lh-1 mb-3">Inscription</h2>
                 <!-------------------- En cas de champs vides au clic ------------------>
                 <?php
@@ -72,15 +69,15 @@ include "titre.php";
             <div class="col-10 mx-auto col-lg-5">
                 <form action="../formulaires/traiterInscription.php" method="POST" class="p-5 border rounded-3 bg-light" id="sinscrire">
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" name="pseudo" id="pseudo" placeholder="Pseudo">
-                        <label for="pseudo">Pseudo</label>
+                        <input type="text" class="form-control" name="pseudo" id="pseudo" pattern="[a-z]{2,25}">
+                        <label for="pseudo">Pseudo (format Exemple_58)</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com">
+                        <input type="email" class="form-control" name="email" id="email">
                         <label for="email">E-mail</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="password" class="form-control" name="pass" id="pass" placeholder="Mot de passe">
+                        <input type="password" class="form-control" name="pass" id="pass">
                         <label for="pass">Mot de passe</label>
                     </div>
             </div>

@@ -2,8 +2,7 @@
 session_start();
 if (!isset($_SESSION["user"])) {
     header("Location: ../../formulaires/formConnexion.php");
-    die(); 
-    exit;
+    die();
 }
 
 $titre = "Espace membre";

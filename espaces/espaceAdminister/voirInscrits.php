@@ -2,8 +2,7 @@
 session_start();
 if (!isset($_SESSION["user"])) {
   header("Location: ../../formulaires/formConnexion.php");
-  die(); 
-  exit;
+  die();
 }
 
 require_once('../../base/connexionBDD.php');
@@ -52,10 +51,10 @@ include "../gererTitre.php";
           foreach ($result as $user) {
           ?>
             <tr>
-              <td><?php echo $user['idUser'] ?></td>
-              <td><?php echo $user['pseudo'] ?></td>
-              <td><?php echo $user['email'] ?></td>
-              <td><?php echo $user['dateInscrit'] ?></td>
+              <td><?php echo strip_tags(stripslashes(htmlentities(trim($user['idUser'])))) ?></td>
+              <td><?php echo strip_tags(stripslashes(htmlentities(trim($user['pseudo'])))) ?></td>
+              <td><?php echo strip_tags(stripslashes(htmlentities(trim($user['email'])))) ?></td>
+              <td><?php echo strip_tags(stripslashes(htmlentities(trim($user['dateInscrit'])))) ?></td>
               <td><?php if ($user["statut"] == "Admin") {
                     echo ' <p class="text-danger">' . $user["statut"] . '</p>';
                   } else {

@@ -8,8 +8,8 @@ if (!isset($_SESSION["user"])) {
 if (isset($_GET['idUser']) && !empty($_GET['idUser'])) {
     require_once('../base/connexionBDD.php');
 
-    $id = strip_tags($_GET['idUser']);
-    $id_destinataire = strip_tags($_SESSION['user']['id']);
+    $id = strip_tags(stripslashes(htmlentities(trim($_GET['idUser']))));
+    $id_destinataire = strip_tags(stripslashes(htmlentities(trim($_SESSION['user']['id']))));
 
     $msg = $db->prepare('SELECT pseudo, titreMessage, idMessagerie, mesage, dateMess
                          FROM messagerie
@@ -57,6 +57,19 @@ include "../espaces/bienvenu.php";
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
 <section>
+
+<span class="d-flex justify-content-end mx-5">
+    <?php
+        if (isset($_SESSION["user"]) && ($_SESSION["user"]["statut"] == "Membre")) {
+            echo "
+            <div>
+                <button type='button' class='btn btn-success'><a class='text-white' href='../espaces/espaceMembres/espaceMembre.php'>Retour</a></button>
+            </div>
+                   ";
+        }else{header('Location: ../../../formulaires/formConnexion.php');}
+    ?>
+</span>
+
     <h2 class="text-center pb-4 mt-2 mb-5 text-primary">Espace messagerie</h2>
     <div class="container mb-5">
         <!----------------------------------------------------------------------------->
@@ -105,14 +118,14 @@ include "../espaces/bienvenu.php";
                             foreach ($resultat as $result) {
                             ?>
                                 <div class="wrapinput">
-                                    <input class="inputm d-block border border-muted rounded w-100 fs-6 fw-bold px-2 py-1 bg-light" type="text" name="titreMessage" value="<?php echo $result['titreMessage'] ?>">
+                                    <input class="inputm d-block border border-muted rounded w-100 fs-6 fw-bold px-2 py-1 bg-light" type="text" name="titreMessage" value="<?php echo strip_tags(stripslashes(htmlentities(trim($result['titreMessage'])))) ?>">
                                 </div>
                                 <div class="wrapinput">
-                                    <textarea class="inputm border border-muted rounded w-100 px-4 pt-1 pb-5 fs-6 fw-bold" type="text" name="message" value="mesage"><?php echo $result['mesage'] ?></textarea>
+                                    <textarea class="inputm border border-muted rounded w-100 px-4 pt-1 pb-5 fs-6 fw-bold" type="text" name="message" value="mesage"><?php echo strip_tags(stripslashes(htmlentities(trim($result['mesage'])))) ?></textarea>
                                 </div>
                                 <div class="d-flex justify-content-end">
-                                    <p class="pt-2 px-2 text-end time"><?php echo $result['dateMess']; ?></p>
-                                    <p class=" pt-2 px-2"><a class="fs-5 text-secondary text-primary" onclick="return confirm('Voulez-vous supprimer ce message?')" href="supprMessMembre.php?idUser=<?php echo $result['idMessagerie']; ?>"><i class="fa fa-trash" aria-hidden="true"></i></a></p>
+                                    <p class="pt-2 px-2 text-end time"><?php echo strip_tags(stripslashes(htmlentities(trim($result['dateMess'])))) ?></p>
+                                    <p class=" pt-2 px-2"><a class="fs-5 text-secondary text-primary" onclick="return confirm('Voulez-vous supprimer ce message?')" href="supprMessMembre.php?idUser=<?php echo strip_tags(stripslashes(htmlentities(trim($result['idMessagerie'])))) ?>"><i class="fa fa-trash" aria-hidden="true"></i></a></p>
                                 </div>
                             <?php
                             }
