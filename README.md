@@ -15,14 +15,15 @@ $\text{\color{red}{- \ 1 \ version \ in \ Symfony}}$ <br>
 $\mathcal{\color{magenta}{Bootstrap \ will \ be \ } \\color{yellow}{ \ recurring \ for } \\color{orange}{ \ all \ Front \ End}}$ <br><br>
 $\mathscr{\color{purple}{ \ Made \ with \ colors \ ... \ }}$  :stuck_out_tongue_winking_eye:
  
+ ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 
 1) Interface <br>
 - travail sur le design UI et UX
-- Inscription et connexion
-- création d'un espace Membre et d'un espace Admin
-- Consulter la météo quotidienne, hebdomadaire ou pour la quinzaine
+- Inscription et connexion à un espace Membre ou à un espace Admin
+- Consulter la météo quotidienne, hebdomadaire ou quinzaine
 - L'admin gère les images et le texte (CRUD)
 - Création d'une messagerie interne simple: envoyer, recevoir, lire un seul
-- responsive avec Bootstrap
+- responsive automatique (...)
 
 2) Version PHP
 - Sécurisation des injections SQL, failles XSS, de la connexion et du mot de passe
