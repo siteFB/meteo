@@ -7,17 +7,16 @@ if (!isset($_SESSION["user"])) {
 }
 
 if ($_POST) {
-    if (isset($_SESSION['ephemeride']) &&
-        isset($_POST['imgTemps']) && !empty($_POST['imgTemps'])
+    if (isset($_POST['imgTemps']) && !empty($_POST['imgTemps'])
         && isset($_POST['titre']) && !empty($_POST['titre'])
         && isset($_POST['topo']) && !empty($_POST['topo'])
     ) {
 
         require_once('../../base/connexionBDD.php');
 
-        $imgTemps = strip_tags($_POST['imgTemps']);
-        $titre = strip_tags($_POST['titre']);
-        $topo = strip_tags($_POST['topo']);
+        $imgTemps = strip_tags(stripslashes(htmlentities(trim($_POST['imgTemps']))));
+        $titre = strip_tags(stripslashes(htmlentities(trim($_POST['titre']))));
+        $topo = strip_tags(stripslashes(htmlentities(trim($_POST['topo']))));
 
         $image = $_FILES['imgTemps']['name'];
         $tmp_name = $_FILES['imgTemps']['tmp_name'];
@@ -36,10 +35,10 @@ if ($_POST) {
         $query->execute();
 
         $_SESSION["ephemeride"] = [
-            "id" => $ephemeride["idEphemeride"],
-            "imgTemps" => $ephemeride["imgTemps"],
-            "titre" => $ephemeride["titre"],
-            "topo" => $ephemeride["topo"]
+            "id" => strip_tags(stripslashes(htmlentities(trim($ephemeride["idEphemeride"])))),
+            "imgTemps" => strip_tags(stripslashes(htmlentities(trim($ephemeride["imgTemps"])))),
+            "titre" => strip_tags(stripslashes(htmlentities(trim($ephemeride["titre"])))),
+            "topo" => strip_tags(stripslashes(htmlentities(trim($ephemeride["topo"]))))
         ];
 
         $_SESSION['message'] = "L'éphéméride' est ajoutée";
@@ -84,8 +83,8 @@ include "../retourEphemeride.php";
                 ?>
                 <form action="" method="post">
                     <div class="form-group">
-                        <label for="imgTemps"><!--<img src="../../images/< ?php echo $ephemeride['imgTemps'] ?>" class="card-img-top bg-secondary border border-secondary">--></label>
-                        <input type="file" id="imgTemps" name="imgTemps" class="form-control" value="../../images/<?php echo $ephemeride['imgTemps'] ?>">
+                        <label for="imgTemps"></label>
+                        <input type="file" id="imgTemps" name="imgTemps" class="form-control" placeholder="image" value="<?php echo strip_tags(stripslashes(htmlentities(trim($ephemeride['imgTemps'])))) ?>">
                     </div>
                     <div class="form-group">
                         <label for="titre"></label>
@@ -96,7 +95,7 @@ include "../retourEphemeride.php";
                         <input type="textarea" id="topo" name="topo" class="form-control" placeholder="topo">
                     </div>
                     <br>                    
-                    <input type="hidden" name="idEphemeride" value="<?php echo $ephemeride['idEphemeride'] ?>">
+                    <input type="hidden" name="idEphemeride" value="<?php echo strip_tags(stripslashes(htmlentities(trim($ephemeride['idEphemeride'])))) ?>">
                     <button class="submit btn btn-primary">Ajouter</button>
                 </form>
             </section>

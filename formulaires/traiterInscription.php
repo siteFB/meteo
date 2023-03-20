@@ -8,9 +8,9 @@ if (isset($_POST) && !empty($_POST)){
             && isset($_POST["pass"]) && !empty($_POST["pass"])
         ){
             $pseudo = trim($_POST["pseudo"]);
-            $pseudo = stripslashes($_POST["pseudo"]);
-            $pseudo = htmlspecialchars($_POST["pseudo"]);
             $pseudo = strip_tags($_POST["pseudo"]); 
+            $pseudo = stripslashes($_POST["pseudo"]);
+            $pseudo = htmlentities($_POST["pseudo"]);
   
             if(!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)){
                 die("L'adresse mail est invalide");
@@ -27,7 +27,6 @@ if (isset($_POST) && !empty($_POST)){
 
             $recupNouvelEntree->bindValue(':pseudo', $pseudo);
             $recupNouvelEntree->bindValue(':email', $_POST['email']);
-
             $recupNouvelEntree->execute();
         
             $id = $db->lastInsertId();
@@ -40,8 +39,10 @@ if (isset($_POST) && !empty($_POST)){
             ];            
             header("Location: formConnexion.php");
               
-        }else{   //En cas de champs vides au clic
-            header("Location: ../accueil/index.php");
+        }else{   //Champs vides au clic
             $_SESSION['erreur'] = "Vous devez remplir tous les champs";
+            header("Location: ../accueil/index.php");
+
         }
     }
+?>

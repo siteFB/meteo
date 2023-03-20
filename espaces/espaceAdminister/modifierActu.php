@@ -174,25 +174,25 @@ include "../retourEphemeride.php";
                 ?>
                 <form action="" method="post" enctype="multipart/form-data">
                     <div class="form-group">
-                        <label for="imgTemps"><img class="form-control card-img-top" src="../../images/<?php echo $ephemeride['imgTemps'] ?>"></label>
-                        <input type="file" id="imgTemps" name="imgTemps" class="form-control mb-2" value="../../images/'<?php echo $ephemeride["imgTemps"] ?>" accept="image/png, image/jpeg, image/jpg">
+                        <label for="imgTemps"></label>
+                        <input type="file" id="imgTemps" name="imgTemps" class="form-control mb-2" value="../../images/'<?php echo strip_tags($ephemeride["imgTemps"]) ?>" accept="image/png, image/jpeg, image/jpg">
                     </div>
                     <div>
                     <div>
-                    <label for="fileName">Nommer l'image <i>(facultatif)</i></label><br>
-            <input type="text" id="fileName" name="fileName" class="form-control mb-4" value=""> 
+                        <label for="fileName">Nommer l'image <i>(facultatif)</i></label><br>
+                        <input type="text" id="fileName" name="fileName" class="form-control mb-4" value=""> 
                     </div>
                     <div class="form-group">
                         <label for="titre">Titre</label>
-                        <input type="text" id="titre" name="titre" class="form-control mb-4" placeholder="Titre" value="<?php echo $ephemeride["titre"] ?>">
+                        <input type="text" id="titre" name="titre" class="form-control mb-4" placeholder="Titre" value="<?php echo strip_tags($ephemeride["titre"]) ?>">
                     </div>
                     <div class="form-group">
                         <label for="topo">Topo</label>
-                        <input type="textarea" placeholder="Topo" id="topo" name="topo" class="form-control mb-4" placeholder="Topo" value="<?php echo $ephemeride["topo"] ?>">
+                        <input type="textarea" placeholder="Topo" id="topo" name="topo" class="form-control mb-4" placeholder="Topo" value="<?php echo strip_tags($ephemeride["topo"]) ?>">
                     </div>
                     </div>
                     <br>
-                    <input type="hidden" name="idEphemeride" value="<?php echo $ephemeride['idEphemeride'] ?>">
+                    <input type="hidden" name="idEphemeride" value="<?php echo strip_tags($ephemeride['idEphemeride']) ?>">
                     <button class="btn btn-primary">Modifier</button>
                 </form>
             </section>

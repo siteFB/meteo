@@ -22,18 +22,21 @@ if (isset($_POST) && !empty($_POST)) {
         $user = $connexionCompte->fetch();
 
         if (!$user) {
-            die("Cet utilisateur et/ou le mot de passe est incorrect!");
+            header("Location: formConnexion.php");
+            $_SESSION['erreur'] = "Cet utilisateur et/ou le mot de passe est incorrect";
+            sleep(1);  // Contrer Force Brute: Arrêt d'1s
         }
 
         if (!password_verify($_POST["pass"], $user["pass"])) {
-            die("Cet utilisateur et/ou le mot de passe est incorrect2!");
+            header("Location: formConnexion.php");
+            $_SESSION['erreur'] = "Cet utilisateur et/ou le mot de passe est incorrect2!";
+            sleep(1);
         }
 
         $_SESSION["user"] = [
             "id" => $user["idUser"],
             "pseudo" => $user["pseudo"],
             "email" => $user["email"],
-            "pass" => $user["pass"],
             "dateInscrit" => $user["dateInscrit"],
             "statut" => $user["statut"]
         ];

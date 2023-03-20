@@ -8,7 +8,7 @@ if (!isset($_SESSION["user"])) {
 if(isset($_GET['idEphemeride']) && !empty($_GET['idEphemeride'])){
     require_once('../../base/connexionBDD.php');
 
-    $id = strip_tags($_GET['idEphemeride']);
+    $id = strip_tags(stripslashes(htmlentities(trim($_GET['idEphemeride']))));
 
     $sql = 'SELECT * FROM `Ephemeride` WHERE `idEphemeride` = :id;';
 
