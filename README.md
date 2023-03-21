@@ -25,7 +25,7 @@ $\mathscr{\color{purple}{ \ Made \ with \ colors \ ... \ }}$  :stuck_out_tongue_
 - Création d'une messagerie interne simple: envoyer, recevoir, lire un seul
 - responsive automatique (...)
 
-2) Version PHP
+2) Version PHP procédural
 - Sécurisation des injections SQL, 
 - des failles XSS, 
 - de la connexion et 
