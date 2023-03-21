@@ -26,6 +26,8 @@ $\mathscr{\color{purple}{ \ Made \ with \ colors \ ... \ }}$  :stuck_out_tongue_
 - responsive automatique (...)
 
 2) Version PHP
-- Sécurisation des injections SQL, failles XSS, de la connexion et du mot de passe
-- Autres astuces à voir :wink:
+- Sécurisation des injections SQL, 
+- des failles XSS, 
+- de la connexion et 
+- du mot de passe 
 
