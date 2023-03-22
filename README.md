@@ -17,7 +17,7 @@ $\mathscr{\color{purple}{ \ Made \ with \ colors \ ... \ }}$  :stuck_out_tongue_
  
  ----------------------------------------------------------------------------------------------------------------------------------------------------------------
  
-1) Interface <br>
+INTERFACE <br>
 - travail sur le design UI et UX
 - Inscription et connexion à un espace Membre ou à un espace Admin
 - Consulter la météo quotidienne, hebdomadaire ou quinzaine
@@ -25,9 +25,11 @@ $\mathscr{\color{purple}{ \ Made \ with \ colors \ ... \ }}$  :stuck_out_tongue_
 - Création d'une messagerie interne simple: envoyer, recevoir, lire un seul
 - responsive automatique (...)
 
-2) Version PHP procédural
+VERSION PHP PROCEDURAL
 - Sécurisation des injections SQL, 
 - des failles XSS, 
-- de la connexion et 
-- du mot de passe 
+- de la connexion,
+- du mot de passe,
+- traversée du répertoire,
+- des requêtes intersites
 
