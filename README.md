@@ -13,7 +13,7 @@ $\text{\color{blue}{- \ 1 \ version \ in \ POO}}$ <br>
 $\text{\color{red}{- \ 1 \ version \ in \ Symfony}}$ <br>
 
 $\mathcal{\color{magenta}{Bootstrap \ will \ be \ } \\color{yellow}{ \ recurring \ for } \\color{orange}{ \ all \ Front \ End}}$ <br><br>
-$\mathcal{{ \ Made \ with \ colors \ ... \ }}$  :stuck_out_tongue_winking_eye:
+$\mathscr{\color{purple}{ \ Made \ with \ colors \ ... \ }}$  :stuck_out_tongue_winking_eye:
  
  ----------------------------------------------------------------------------------------------------------------------------------------------------------------
  
@@ -27,10 +27,10 @@ INTERFACE <br>
 
 VERSION PHP PROCEDURAL
 - Sécurisation des injections SQL, 
-- des failles XSS, 
-- de la connexion,
-- du mot de passe,
-- traversée du répertoire,
-- des requêtes intersites,
+- Des failles XSS, 
+- De la connexion,
+- Du mot de passe,
+- Traversée du répertoire,
+- Des requêtes intersites,
 - Contrer Force Brute
 
