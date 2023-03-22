@@ -22,7 +22,7 @@ INTERFACE <br>
 - Inscription et connexion à un espace Membre ou à un espace Admin
 - Consulter la météo quotidienne, hebdomadaire ou quinzaine
 - L'admin gère les images et le texte (CRUD)
-- Création d'une messagerie interne simple: envoyer, recevoir, lire un seul
+- Création d'une messagerie interne simple: envoyer, recevoir, lire un seul, supprimer
 - responsive automatique (...)
 
 VERSION PHP PROCEDURAL
