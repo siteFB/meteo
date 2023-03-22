@@ -23,7 +23,7 @@ INTERFACE <br>
 - Consulter la météo quotidienne, hebdomadaire ou quinzaine
 - L'admin gère les images et le texte (CRUD)
 - Création d'une messagerie interne simple: envoyer, recevoir, lire un seul, supprimer
-- responsive automatique $\mathcal{( \ of \ course, \ Dear \ Boot! )}$
+- responsive automatique $\mathcal{( \ Of \ course, \ Dear \ Boot! )}$
 
 VERSION PHP PROCEDURAL
 - Sécurisation des injections SQL, 
