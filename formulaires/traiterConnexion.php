@@ -10,21 +10,30 @@ if (isset($_POST) && !empty($_POST)) {
         && !empty($_POST["email"] && !empty($_POST["pass"]))
     ) {
 
-        if (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
-            die("L'adresse mail est invalide");
-        }
-
-        require_once "../base/connexionBDD.php";
+        require_once "../base/connexionBDD.php"; 
 
         $connexionCompte = $db->prepare("SELECT * FROM `users` WHERE `email`= :email");
         $connexionCompte->bindValue(':email', $_POST['email']);
         $connexionCompte->execute();
         $user = $connexionCompte->fetch();
 
-        if (!$user) {
+        if (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
             header("Location: formConnexion.php");
             $_SESSION['erreur'] = "Cet utilisateur et/ou le mot de passe est incorrect";
             sleep(1);  // Contrer Force Brute: Arrêt d'1s
+        }
+
+        $pass = password_hash($_POST["pass"], PASSWORD_ARGON2ID);
+       if (!password_verify($_POST["pass"], $pass)) {
+        header("Location: formConnexion.php");
+        $_SESSION['erreur'] = "Cet utilisateur et/ou le mot de passe est incorrect";
+        sleep(1);
+        }
+
+        if (!$user) {
+            header("Location: formConnexion.php");
+            $_SESSION['erreur'] = "Cet utilisateur et/ou le mot de passe est incorrect";
+            sleep(1);
         }
 
         if (!password_verify($_POST["pass"], $user["pass"])) {
