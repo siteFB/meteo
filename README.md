@@ -13,7 +13,7 @@ $\text{\color{blue}{- \ 1 \ version \ in \ POO}}$ <br>
 $\text{\color{red}{- \ 1 \ version \ in \ Symfony}}$ <br>
 
 $\mathcal{\color{magenta}{Bootstrap \ will \ be \ } \\color{yellow}{ \ recurring \ for } \\color{orange}{ \ all \ Front \ End}}$ <br><br>
-$\mathscr{\color{purple}{ \ Made \ with \ colors \ ... \ }}$  :stuck_out_tongue_winking_eye:
+  // Contrer Force Brute: Arrêt d'1s\color{purple}{ \ Made \ with \ colors \ ... \ }}$  :stuck_out_tongue_winking_eye:
  
  ----------------------------------------------------------------------------------------------------------------------------------------------------------------
  
@@ -23,7 +23,7 @@ INTERFACE <br>
 - Consulter la météo quotidienne, hebdomadaire ou quinzaine
 - L'admin gère les images et le texte (CRUD)
 - Création d'une messagerie interne simple: envoyer, recevoir, lire un seul, supprimer
-- responsive automatique (of course, Dear Boot!)
+- responsive automatique $\mathcal{( \ of \ course, \ Dear \ Boot! )}$
 
 VERSION PHP PROCEDURAL
 - Sécurisation des injections SQL, 
