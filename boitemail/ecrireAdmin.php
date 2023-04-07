@@ -2,7 +2,7 @@
 session_start();
 if (!isset($_SESSION["user"])) {
     header("Location: ../../formulaires/formConnexion.php");
-    die();
+    exit();
 }
 
 require_once('../base/connexionBDD.php');
@@ -12,16 +12,18 @@ if (isset($_SESSION['user']['id']) and !empty($_SESSION['user']['id'])) {
         if (
             isset($_POST['destinataire']) && !empty($_POST['destinataire'])
             && isset($_POST['titreMessage']) && !empty($_POST['titreMessage'])
-            && isset($_POST['message']) && !empty($_POST['message'])
+            && isset($_POST['mesage']) && !empty($_POST['mesage'])
         ) {
 
+            $id_expediteur = $_SESSION['user']['id'];
             $destinataire = htmlspecialchars($_POST['destinataire']);
             $titreMessage = htmlspecialchars($_POST['titreMessage']);
-            $message = htmlspecialchars($_POST['message']);
+            $mesage = htmlspecialchars($_POST['mesage']);
 
             // Récupérer le pseudo...
-            $id_destinataire = $db->prepare('SELECT idUser FROM users WHERE pseudo = ?');
-            $id_destinataire->execute(array($destinataire));
+            $id_destinataire = $db->prepare('SELECT idUser FROM users WHERE pseudo = :destinataire');
+            $id_destinataire->bindValue(':destinataire', $destinataire, PDO::PARAM_STR);
+            $id_destinataire->execute();
 
             // Protéger l'injection dans l'URL
             $dest_exist = $id_destinataire->rowCount();
@@ -32,27 +34,39 @@ if (isset($_SESSION['user']['id']) and !empty($_SESSION['user']['id'])) {
 
 
                 // Insérer le message: faire une requête
-                $ins = $db->prepare('INSERT INTO messagerie(id_expediteur, id_destinataire, titreMessage, mesage) VALUES (?, ?, ?, ?)');
-                $ins->execute(array($_SESSION['user']['id'], $id_destinataire, $titreMessage, $message));
+                $ins = $db->prepare('INSERT INTO messagerie(id_expediteur, id_destinataire, titreMessage, mesage)
+                                     VALUES (:id_expediteur, :id_destinataire, :titreMessage, :mesage)');
+                
+                $ins->bindValue(':id_expediteur', $_SESSION['user']['id'], PDO::PARAM_INT);
+                $ins->bindValue(':id_destinataire', $id_destinataire, PDO::PARAM_INT);
+                $ins->bindValue(':titreMessage', $titreMessage, PDO::PARAM_STR);
+                $ins->bindValue(':mesage', $mesage, PDO::PARAM_STR);
+    
+                $ins->execute();
 
                 $_SESSION['message'] = "Votre message a bien été envoyé";
                 require_once('../base/deconnexionBDD.php');
-                header('Location: ecrireAdmin.php');
+                
             } else {
                 $_SESSION['erreur'] = "Ce destinataire n'existe pas";
+                require_once('../base/deconnexionBDD.php');
             }
         } else {
             $_SESSION['erreur'] = "Le formulaire est incomplet";
+            require_once('../base/deconnexionBDD.php');
         }
     }
 
     // La requête
-    $destinataires = $db->query('SELECT pseudo FROM users ORDER BY pseudo');
+   //$destinataires = $db->query('SELECT pseudo FROM users ORDER BY pseudo');
+   // require_once('../base/deconnexionBDD.php');
+?>
 
+    <?php
     $titre = "Espace administrateur";
 
     include "../accueil/header.php";
-?>
+    ?>
     <link rel="stylesheet" href="../../boot.css">
     <?php
     include "../accueil/navbar.php";
@@ -76,6 +90,9 @@ if (isset($_SESSION['user']['id']) and !empty($_SESSION['user']['id'])) {
             } else {
                 header('Location: ../../../formulaires/formConnexion.php');
             }
+        } else {
+            header('Location: ecrireAdmin.php');
+        }
             ?>
         </span>
         <h2 class="text-center pb-3 mt-2 mb-5 text-primary">Espace messagerie</h2>
@@ -115,7 +132,7 @@ if (isset($_SESSION['user']['id']) and !empty($_SESSION['user']['id'])) {
                             <input class="inputm border border-muted rounded w-100 fs-6 fw-bold px-4 py-1 mb-2" type="text" name="titreMessage" placeholder="Sujet:">
                         </div>
                         <div class="wrapinput">
-                            <textarea class="inputm border border-muted rounded w-100 px-4 pt-1 pb-5 fs-6 fw-bold" name="message" placeholder="Message"></textarea>
+                            <textarea class="inputm border border-muted rounded w-100 px-4 pt-1 pb-5 fs-6 fw-bold" name="mesage" placeholder="Message"></textarea>
                         </div>
                         <div class="containerbutton w-100 d-flex-wrap justify-content-center pt-4">
                             <button class="w-100 h-100 p-3 fs-5 text-white rounded" style="background-color:#846add" name="envoimessage">
@@ -132,8 +149,3 @@ if (isset($_SESSION['user']['id']) and !empty($_SESSION['user']['id'])) {
     <?php
     include "../accueil/footer.php";
     ?>
-<?php
-} else {
-    header('Location: ecrireAdmin.php');
-}
-?>

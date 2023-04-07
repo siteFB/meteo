@@ -18,12 +18,12 @@ if(isset($_GET['idEphemeride']) && !empty($_GET['idEphemeride'])){
 
     if(!$produit){
         $_SESSION['erreur'] = "Cet id n'existe pas";
-        header('Location:../gestionSecteurs/indexSectors.php');
+        header('Location: consulterMeteo.php');
     }
     
 }else{
     $_SESSION['erreur'] = "URL invalide";
-    header('Location:../gestionSecteurs/indexSectors.php');
+    header('Location: consulterMeteo.php');
 }
 ?>
 <?php

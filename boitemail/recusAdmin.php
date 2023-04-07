@@ -23,6 +23,10 @@ $msg->execute();
 $msg_nbr = $msg->rowCount();
 }
 
+?>
+
+<?php
+
 $titre = "Espace Administrateur";
 
 include "../accueil/header.php";
