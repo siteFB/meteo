@@ -8,7 +8,7 @@
             <a class="p-2 link-secondary" href="https://fr.indeed.com/">France Météo</a>
             <a class="p-2 link-secondary"
                 href="https://openclassrooms.com/fr/paths/500-developpeur-dapplication-php-symfony">OpenClassRoom</a>
-            @MÉTÉO 58
+                &copy;MÉTÉO 58
         </nav>
     </footer>
     

@@ -2,7 +2,7 @@
 session_start();
 if (!isset($_SESSION["user"])) {
     header("Location: ../formulaires/formConnexion.php");
-    die();
+    exit();
 }
 
     if(isset($_GET['idUser']) && !empty($_GET['idUser'])){
