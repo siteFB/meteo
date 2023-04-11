@@ -22,25 +22,18 @@ if (isset($_GET['idUser']) && !empty($_GET['idUser'])) {
 
     $msg->bindValue(':idUser', $id, PDO::PARAM_INT);
     $msg->bindValue(':id_destinataire', $id_destinataire, PDO::PARAM_INT);
-
     $msg->execute();
-
-    $msg_nbr = $msg->rowCount();   // nb de messages d'un seul expéditeur
-
+    $msg_nbr = $msg->rowCount();
     $resultat = $msg->fetchAll(PDO::FETCH_ASSOC);
-
-    /*echo '<pre>';
-    print_r($resultat); 
-    print_r($resultat[0]['pseudo']); 
-    print_r($_GET['idUser']);
-    echo '</pre>';*/
 
     if (!$resultat) {
         $_SESSION['erreur'] = "Cet id n'existe pas";
         header('Location: /boitemail/recusAdmin.php');
     }
 }
+?>
 
+<?php
 $titre = "Espace Administrateur";
 
 include "../accueil/header.php";
@@ -57,18 +50,19 @@ include "../espaces/bienvenu.php";
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
 <section>
-
-<span class="d-flex justify-content-end mx-5">
-    <?php
+    <span class="d-flex justify-content-end mx-5">
+        <?php
         if (isset($_SESSION["user"]) && ($_SESSION["user"]["statut"] == "Admin")) {
             echo "
             <div>
                 <button type='button' class='btn btn-success'><a class='text-white' href='../espaces/espaceAdminister/espaceAdmin.php'>Retour</a></button>
             </div>
                    ";
-        }else{header('Location: ../../../formulaires/formConnexion.php');}
-    ?>
-</span>
+        } else {
+            header('Location: ../../../formulaires/formConnexion.php');
+        }
+        ?>
+    </span>
 
     <h2 class="text-center pb-4 mt-2 mb-5 text-primary">Espace messagerie</h2>
     <div class="container mb-5">
@@ -100,7 +94,6 @@ include "../espaces/bienvenu.php";
                         }
                         ?>
                         <div>
-
                             <div class="wrapinput mb-5">
                                 <label for="auteur">Expéditeur</label>
                                 <?php
