@@ -20,7 +20,7 @@ if (isset($_SESSION['user']['id']) and !empty($_SESSION['user']['id'])) {
             $titreMessage = htmlspecialchars($_POST['titreMessage']);
             $mesage = htmlspecialchars($_POST['mesage']);
 
-            // Récupérer le pseudo...
+            // Récupérer le pseudo du destinataire...
             $id_destinataire = $db->prepare('SELECT idUser FROM users WHERE pseudo = :destinataire');
             $id_destinataire->bindValue(':destinataire', $destinataire, PDO::PARAM_STR);
             $id_destinataire->execute();
@@ -28,7 +28,7 @@ if (isset($_SESSION['user']['id']) and !empty($_SESSION['user']['id'])) {
             // Protéger l'injection dans l'URL
             $dest_exist = $id_destinataire->rowCount();
             if ($dest_exist == 1) {
-                // ... et récupérer l'ID
+                // et récupérer l'ID du destinataire
                 $id_destinataire = $id_destinataire->fetch();
                 $id_destinataire = $id_destinataire['idUser'];
 
