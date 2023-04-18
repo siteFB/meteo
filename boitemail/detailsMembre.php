@@ -40,7 +40,9 @@ if (isset($_GET['idUser']) && !empty($_GET['idUser'])) {
         header('Location: /boitemail/recusMembre.php');
     }
 }
+?>
 
+<?php
 $titre = "Espace membre";
 
 include "../accueil/header.php";

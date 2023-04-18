@@ -46,6 +46,7 @@ if (isset($_SESSION['user']['id']) and !empty($_SESSION['user']['id'])) {
 
                 $_SESSION['message'] = "Votre message a bien été envoyé";
                 require_once('../base/deconnexionBDD.php');
+                header('Location: ecrireAdmin.php');
                 
             } else {
                 $_SESSION['erreur'] = "Ce destinataire n'existe pas";
