@@ -40,14 +40,16 @@ if (isset($_SESSION['user']['id']) and !empty($_SESSION['user']['id'])) {
                 header('Location: ecrireMembre.php');
             } else {
                 $_SESSION['erreur'] = "Ce destinataire n'existe pas";
+                require_once('../base/deconnexionBDD.php');
             }
         } else {
             $_SESSION['erreur'] = "Le formulaire est incomplet";
+            require_once('../base/deconnexionBDD.php');
         }
     }
 
     // La requête
-    $destinataires = $db->query('SELECT pseudo FROM users ORDER BY pseudo');
+    //$destinataires = $db->query('SELECT pseudo FROM users ORDER BY pseudo');
 
     $titre = "Espace Membre";
 
