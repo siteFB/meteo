@@ -13,7 +13,7 @@ $\text{\color{blue}{- \ 1 \ version \ in \ POO}}$ <br>
 $\text{\color{red}{- \ 1 \ version \ in \ Symfony}}$ <br>
 
 $\mathcal{\color{magenta}{Bootstrap \ will \ be \ } \\color{yellow}{ \ recurring \ for } \\color{orange}{ \ all \ Front \ End}}$ <br><br>
-$\mathscr{\color{purple}{ \  balance \ sheet \ of \ the \ exercise:... \ }}$  
+$\mathscr{\color{purple}{ \  Balance \ sheet \ of \ the \ exercise:... \ }}$  
  
  ----------------------------------------------------------------------------------------------------------------------------------------------------------------
  
