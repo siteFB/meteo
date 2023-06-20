@@ -14,7 +14,11 @@ $\text{\color{red}{- \ 1 \ version \ in \ Symfony}}$ <br>
 
 $\mathcal{\color{magenta}{Bootstrap \ will \ be \ } \\color{yellow}{ \ recurring \ for } \\color{orange}{ \ all \ Front \ End}}$ <br><br>
 $\mathscr{\color{purple}{ \  Balance \ sheet \ of \ the \ exercise:... \ }}$  
- 
+
+ Procedural PHP is the easiest for me and I am familiar with database communication and security.<br>
+Symfony allowed me to understand PHP POO and class storage.<br>
+Symfony is even simpler than procedural PHP because it is a "ready to use" framework: just look for the commands and register the corresponding maker in the terminal.<br>On the other hand, I experienced difficulties during the cross tables. Indeed, I created an internal messaging system that requires 2 tables.<br>
+My goal now is to review all the notions (PHP I also improve to have experience with JavaScript) through snippets that will be used to complete my sites.
  ----------------------------------------------------------------------------------------------------------------------------------------------------------------
  
 INTERFACE <br>
