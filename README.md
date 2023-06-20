@@ -12,7 +12,7 @@ $\text{\color{lime}{- \ 1 \ version \ in \ procedural \ php}}$ <br>
 $\text{\color{blue}{- \ 1 \ version \ in \ POO}}$ <br>
 $\text{\color{red}{- \ 1 \ version \ in \ Symfony}}$ <br>
 
-$\mathcal{\color{magenta}{Bootstrap \ will \ be \ } \\color{yellow}{ \ recurring \ for } \\color{orange}{ \ all \ Front \ End}}$ <br><br><br>
+$\mathcal{\color{magenta}{Bootstrap \ will \ be \ } \\color{yellow}{ \ recurring \ for } \\color{orange}{ \ all \ Front \ End}}$ <br><br>
 
 $\mathscr{\color{purple}{ \  Balance \ sheet \ of \ the \ exercise:... \ }}$
 
@@ -30,7 +30,7 @@ INTERFACE <br>
 - Consulter la météo quotidienne, hebdomadaire ou quinzaine
 - L'admin gère les images et le texte (CRUD)
 - Création d'une messagerie interne simple: envoyer, recevoir, lire un seul, supprimer
-- responsive automatique $\mathscr{( \ Of \ course, \ Dear \ Boot! )}$
+- responsive automatique $\mathscr{( \ thanks \ to \ Bootstrap! )}$
 
 VERSION PHP PROCEDURAL
 - Sécurisation des injections SQL, 
