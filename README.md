@@ -19,7 +19,7 @@ $\text{\color{red}{- \ 1 \ version \ in \ Symfony}}$ <br>
 $\mathcal{\color{magenta}{Bootstrap \ will \ be \ } \\color{yellow}{ \ recurring \ for } \\color{orange}{ \ all \ Front \ End}}$ <br><br>
 
  ----------------------------------------------------------------------------------------------------------------------------------------------------------------
- # $\text{{  \  \  \   \   \   \   \   \  \  \   \   \   \   \   \  \  \   \   \   \   \   \  \  }}$ PHP procédural <br>
+ # $text{{  \  \  \   \   \   \   \   \  \  \   \   \   \   \   \  \  \   \   \   \   \   \  \  }}$ PHP procédural <br>
 INTERFACE <br>
 - travail sur le design UI et UX
 - Inscription et connexion à un espace Membre ou à un espace Admin
