@@ -28,7 +28,7 @@ INTERFACE <br>
 - Création d'une messagerie interne simple: envoyer, recevoir, lire un seul, supprimer
 - responsive automatique $\mathscr{( \ thanks \ to \ Bootstrap! )}$
 
-VERSION PHP PROCEDURAL
+SÉCURISATION
 - Sécurisation des injections SQL, 
 - Des failles XSS, 
 - De la connexion,
