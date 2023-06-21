@@ -12,7 +12,7 @@ $\text{\color{red}{- \ 1 \ version \ in \ Symfony}}$ <br>
 
 $\mathcal{\color{magenta}{Bootstrap \ will \ be \ } \\color{yellow}{ \ recurring \ for } \\color{orange}{ \ all \ Front \ End}}$ <br><br>
 
-$\mathscr{\color{purple}{ \  Your \ are \ in \ procedural \ PHP \ version \ of \ the \ site \ }}$ ## $\text{\color{olive}{méTÉo}}$
+$\mathscr{\color{purple}{ \  Your \ are \ in \ procedural \ PHP \ version \ of \ the \ site \ }}$  $\text{\color{olive}{méTÉo}}$ :earth_africa:
 
  ----------------------------------------------------------------------------------------------------------------------------------------------------------------
  
