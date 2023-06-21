@@ -1,9 +1,10 @@
 [![](https://img.shields.io/badge/BOOTSTRAP-blue?style=for-the-badge)]
 [![](https://img.shields.io/badge/PHP-blueviolet?style=for-the-badge)]<br>
 <br>
-$\mathcal{\color{orange}{ \ Welcome ! \ }}$ 
+
 <br>
 
+$\mathcal{\color{orange}{ \ Welcome \ ! \ }}$ 
 $\mathscr{\color{purple}{ \  Your \ are \ in \ procedural \ PHP \ version \ of \ the \ site \ }}$  $\text{\color{olive}{méTÉo}}$ :earth_africa: <br><br>
 
 ## $\text{\color{olive}{méTÉo}}$ :earth_africa:
