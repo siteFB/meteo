@@ -16,7 +16,7 @@ $\text{\color{lime}{- \ 1 \ version \ in \ procedural \ php}}$ <br>
 $\text{\color{blue}{- \ 1 \ version \ in \ POO}}$ <br>
 $\text{\color{red}{- \ 1 \ version \ in \ Symfony}}$ <br>
 
-$\mathcal{\color{magenta}{Bootstrap \ will \ be \ } \\color{yellow}{ \ recurring \ for } \\color{orange}{ \ all \ Front \ End}}$ <br><br>
+$\mathcal{\color{magenta}{Bootstrap \ will \ be \ } \\color{yellow}{ \ recurring \ for } \\color{orange}{ \ all \ Front \ End}}$<br><br>
 
  ----------------------------------------------------------------------------------------------------------------------------------------------------------------
  # ${{   \   \   \   \   \   \   \   \  \   \   \   \   \   \   \   \   \   \   \   \   \   \   \  \   \   \   \   \   \   \   \   \   \   \   \   \   \   }}$ PHP procédural <br>
