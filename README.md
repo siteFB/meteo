@@ -1,5 +1,5 @@
 [![](https://img.shields.io/badge/BOOTSTRAP-blue?style=for-the-badge)]
-[![](https://img.shields.io/badge/PHP-blueviolet?style=for-the-badge)]<br>
+[![](https://img.shields.io/badge/PHP procédural-blueviolet?style=for-the-badge)]<br>
 <br>
 ## $\text{\color{olive}{méTÉo}}$ :earth_africa:
 <br>
