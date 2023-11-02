@@ -2,9 +2,9 @@
 [![](https://img.shields.io/badge/PHP-blueviolet?style=for-the-badge)]<br>
 <br>
 
-$\mathcal{\color{orange}{ \ Welcome \ ! \ }}$ <br>
+$\mathcal{\color{orange}{\ Welcome \ ! \}}$ <br>
 
-$\mathscr{\color{purple}{ \  \   \   \   \   \   \  \  \   \   \   \   \   \  \  \   \   \   \   \   \ Your \ are \ in \ procedural \ PHP \ version \ of \ the \ site }}$  $\text{\color{olive}{méTÉo}}$ :earth_africa:
+$\mathscr{\color{purple}{\  \   \   \   \   \   \  \  \   \   \   \   \   \  \  \   \   \   \   \   \ Your \ are \ in \ procedural \ PHP \ version \ of \ the \ site}}$  $\text{\color{olive}{méTÉo}}$ :earth_africa:
 <br><br>
 
 $\text{\color{olive}{méTÉo}}$ :earth_africa:
@@ -19,7 +19,7 @@ $\text{\color{red}{- \ 1 \ version \ in \ Symfony}}$ <br>
 $\mathcal{\color{magenta}{Bootstrap \ will \ be \ } \\color{yellow}{ \ recurring \ for } \\color{orange}{ \ all \ Front \ End}}$<br><br>
 
  ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-$\mathcal{\   \   \   \   \   \   \   \  \   \   \   \   \   \   \   \   \   \   \   \   \   \   \  \   \   \   \   \   \   \   \   \   \   \   \   \  PHP \ procédural}$ PHP procédural <br>
+$\mathcal{\   \   \   \   \   \   \   \  \   \   \   \   \   \   \   \   \   \   \   \   \   \   \  \   \   \   \   \   \   \   \   \   \   \   \   \  PHP \ procédural}$<br>
 INTERFACE <br>
 - travail sur le design UI et UX
 - Inscription et connexion à un espace Membre ou à un espace Admin
